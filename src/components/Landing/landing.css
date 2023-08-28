@@ -1,0 +1,143 @@
+.header {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  width: fit-content;
+  margin: 15vh 0 4rem 10vw;
+  display: inline-block;
+  transform: scale(1, 1.75);
+  user-select: none;
+}
+
+.header--line3 {
+  text-align: end;
+}
+
+.portfolio--container {
+  width: 100%;
+  height: 50vh;  
+  padding: 0 1em;
+  overflow: hidden;
+}
+
+.portfolio {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  gap: .5em;
+
+  cursor: pointer;
+}
+
+.project {
+  min-width: 700px;
+  height: 100%;
+
+  position: relative;
+
+  border: 1px solid #f2f2f2;
+}
+
+.brettspielplatz {  
+  background: url("../../assets/images/bsp-thumbnail.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+.yt2mp3 {  
+  background: url("../../assets/images/yt2mp3-thumbnail.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.rezepte {
+  background: url("../../assets/images/rezepte-thumbnail.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  height: 0;
+  width: 80%;
+
+  padding: 1em;
+  
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  transition: all .5s ease-in-out;
+  
+  opacity: 0;
+
+  cursor: default;
+}
+
+.project:hover .overlay {
+  height: 40%;
+  bottom: 20px;
+  opacity: 1;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  width: fit-content;
+  margin: 1rem 0 1em 15vw;
+  user-select: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+  padding-right: 10%;
+}
+
+.linkedin:hover {
+  transform: scale(1.1) rotate(-15deg);
+}
+
+.github:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+@media (max-width: 800px) {
+  .portfolio {
+    flex-direction: column;
+  }
+
+  .project {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .project:hover .overlay {
+    height: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .links {
+    flex-direction: column;
+    padding-top: 1em;
+  }
+}
