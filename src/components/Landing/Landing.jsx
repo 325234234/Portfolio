@@ -3,6 +3,7 @@ import Overlay from "./Overlay"
 import { useRef, useEffect } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 export default function Landing() {
   
@@ -55,13 +56,29 @@ export default function Landing() {
       <main className="portfolio--container">
         <div className="portfolio" ref={scrollContainerRef}>
           <div className="brettspielplatz project">
-            <Overlay title="Brettspielplatz" desc="Die Unternehmensseite des Brettspielplatzes, Berlins größtem Brettspielcafé."/>
+            <Overlay
+              title="The company page"
+              desc="for the Brettspielplatz: Berlin's biggest board game café. Designed according to the customer's wants 
+              and built as a SPA using React and ReactRouter."
+              demo="https://brettspielplatz.netlify.app"
+              code="https://github.com/325234234/Brettspielplatz"
+            />
           </div>
           <div className="rezepte project">
-            <Overlay />
+            <Overlay
+              title="A website for my Mum,"
+              desc="who loves to cook but doesn't always know what to cook. Uses two APIs to fetch and translate recipes
+              from a public database as well as Google Firebase to store my Mum's own recipes."
+              demo="https://muttisrezepte.netlify.app/"
+            />
           </div>
           <div className="yt2mp3 project">
-            <Overlay />
+            <Overlay
+              title="A YouTube to Mp3 converter"
+              desc="with minimalistic design and 100% less keyloggers than the average conversion page."
+              demo="https://digitalbard.netlify.app/"
+              code="https://github.com/325234234/YouTubeToMp3"
+            />
           </div>
         </div>
       </main>
@@ -72,11 +89,14 @@ export default function Landing() {
           <p>based in Berlin.</p>
         </div>
         <div className="links">          
-          <a href="https://www.linkedin.com/in/tino-baumgart/" target="_blank" rel="noreferrer" title="Visit my LinkedIn profile">
-            <FontAwesomeIcon className="link linkedin" icon={faLinkedin} style={{fontSize: "2rem", color: "#f2f2f2"}} />
+          <a href="https://www.linkedin.com/in/tino-baumgart/" className="linkedin" target="_blank" rel="noreferrer" title="Visit my LinkedIn profile">
+            <FontAwesomeIcon  icon={faLinkedin} style={{fontSize: "2rem", color: "#f2f2f2"}} />
           </a>
-          <a href="https://github.com/325234234" target="_blank" rel="noreferrer" title="Visit my GitHub profile">
-            <FontAwesomeIcon className="link github" icon={faGithub} style={{fontSize: "2rem", color: "#f2f2f2"}} />
+          <a href="mailto:tn.bmgrt@gmail.com" className="mail">
+            <FontAwesomeIcon icon={faEnvelope} style={{fontSize: "2rem", transform: "scale(.9, 1)", color: "#f2f2f2"}} />
+          </a>
+          <a href="https://github.com/325234234" className="github" target="_blank" rel="noreferrer" title="Visit my GitHub profile">
+            <FontAwesomeIcon  icon={faGithub} style={{fontSize: "2rem", color: "#f2f2f2"}} />
           </a>
         </div>
       </footer>
