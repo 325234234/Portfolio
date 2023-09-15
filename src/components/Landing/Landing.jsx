@@ -88,11 +88,11 @@ export default function Landing() {
           <p>German web developer</p>
           <p>based in Berlin.</p>
         </div>
-        <div className="links">          
+        <div className="socials">          
           <a href="https://www.linkedin.com/in/tino-baumgart/" className="linkedin" target="_blank" rel="noreferrer" title="Visit my LinkedIn profile">
             <FontAwesomeIcon  icon={faLinkedin} style={{fontSize: "2rem", color: "#f2f2f2"}} />
           </a>
-          <a href="mailto:tn.bmgrt@gmail.com" className="mail">
+          <a href="mailto:tn.bmgrt@gmail.com" className="mail" title="Write me an email">
             <FontAwesomeIcon icon={faEnvelope} style={{fontSize: "2rem", transform: "scale(.9, 1)", color: "#f2f2f2"}} />
           </a>
           <a href="https://github.com/325234234" className="github" target="_blank" rel="noreferrer" title="Visit my GitHub profile">
