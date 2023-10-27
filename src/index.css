@@ -274,11 +274,6 @@ body {
 }
 
 /* height breakpoints */
-@media (max-height: 800px) {  
-  .project:hover .overlay {
-    height: 60%;
-  }
-}
 
 @media (max-height: 500px) {  
   .overlay {
