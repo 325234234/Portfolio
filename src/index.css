@@ -33,9 +33,12 @@ body {
 
 .portfolio--container {
   width: 100%;
-  height: 50vh;  
+  height: 50vh;
+
   padding: 0 1em;
+
   overflow: hidden;
+
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -58,6 +61,7 @@ body {
 .project {
   min-width: 700px;
   height: 100%;
+  min-height: 100px;
 
   position: relative;
 
@@ -205,6 +209,10 @@ body {
 
 /* Width breakpoints */
 @media (max-width: 800px) {
+  .portfolio--container {
+    height: auto;
+  }
+  
   .portfolio {
     flex-direction: column;
   }
@@ -214,16 +222,27 @@ body {
     height: 100%;
   }
 
-  .project:hover .overlay {
-    height: 70%;
-    bottom: 10px;
-  }
-
   .overlay {
-    padding: 0;
-    width: 60%;
+    /* span it across the whole project div */
+    width: 100%;  
     
-    left: 20%;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 0;
+
+    /* center the buttons */
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project:hover .overlay {
+    /* span it across the whole project div */
+    height: 100%;
+
+    bottom: 0;
   }
 
   .overlay--text {
@@ -243,22 +262,9 @@ body {
   .header {
     font-size: 2rem;
   }
-
-  .project:hover .overlay {
-    height: 50%;
-    width: 80%;
-  }
-
-  .overlay {    
-    left: 10%;
-  }
   
   .overlay--buttons {  
     gap: 1em;
-  }
-
-  .overlay--button {
-    font-size: 1rem;
   }
 
   .socials {
@@ -267,27 +273,30 @@ body {
   }
 }
 
-/* Height breakpoints */
-@media (max-height: 800px) {
-  .project:hover .overlay {
-    height: 50%;
-  }
-}
-
-@media (max-height: 600px) {
+/* height breakpoints */
+@media (max-height: 800px) {  
   .project:hover .overlay {
     height: 60%;
   }
 }
 
-@media (max-height: 480px) {
-  .project:hover .overlay {
-    height: 70%;
-  }
-}
+@media (max-height: 500px) {  
+  .overlay {
+    /* span it across the whole project div */
+    width: 100%;  
+    
+    bottom: 0;
+    left: 0;
 
-@media (max-height: 400px) {
+    padding: 1em;
+
+    border-radius: 0;
+  }
+  
   .project:hover .overlay {
-    height: 80%;
+    /* span it across the whole project div */
+    height: 100%;
+
+    bottom: 0;
   }
 }

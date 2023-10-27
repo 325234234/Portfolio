@@ -69,7 +69,8 @@ export default function App() {
               title="A website for my Mum,"
               desc="who loves to cook but doesn't always know what to cook. Uses two APIs to fetch and translate recipes
               from a public database as well as Google Firebase to store my Mum's own recipes."
-              demo="https://muttisrezepte.netlify.app/"
+              demo="https://kochideen.netlify.app/"
+              code="https://github.com/325234234/Mama-kocht"
             />
           </div>
           <div className="yt2mp3 project">
