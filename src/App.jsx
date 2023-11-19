@@ -60,7 +60,7 @@ export default function App() {
               title="The company page"
               desc="for the Brettspielplatz: Berlin's biggest board game café. Designed according to the customer's wants 
               and built as a SPA using React and ReactRouter."
-              demo="https://brettspielplatz.netlify.app"
+              demo="https://brettspielplatz.berlin"
               code="https://github.com/325234234/Brettspielplatz"
             />
           </div>
